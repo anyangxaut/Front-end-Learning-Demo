@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>知乎 - 与世界分享你的知识、经验和见解</title>
+		<link rel=stylesheet type="text/css" href="css/LoginRegisterPage.css"/>
+	</head>
+	
+	<body>
+		<div class="main-content">
+			<div class="title">
+				<img class="logo hide-text" src="images/logo.png" alt="知乎">
+				<h2 class="subtitle">与世界分享你的知识、经验和见解</h2>
+			</div>
+			<div class="content sign-flow">
+				<div class="tab-navigation">
+					<a href="javascript:register()" class="active">注册</a>
+					<a href="javascript:login()">登录</a>
+					<span id="slider-bar"></span>
+				</div>
+				<!--注册-->				
+				<div class="view view-register">
+					<form action="*">
+						<div class="inputs">
+							<div class="input-wrapper">
+								<input type="text" name="username" placeholder="姓名">
+								<label class="error is-visible" name="usernameerror"/>
+							</div
+							<div class="input-wrapper">
+								<input type="text" name="phonenumber" placeholder="手机号（仅支持中国大陆）">
+								<label class="error is-visible" name="phonenumbererror"/>
+							</div>
+							<div class="input-wrapper">
+								<input type="password" name="password" placeholder="密码（不少于6位）" >
+								<label class="error is-visible" name="passworderror"/>
+							</div>
+						</div>
+						<div class="button-wrapper">
+							<button class="register-button" name="registerbutton">注册知乎</button>
+						</div>
+					</form>
+					<button class="download-button button-view">下载知乎App</button>
+				</div>
+				<!--登录-->
+				<div class="view view-login" style="display:none;">
+					<form action="*">
+						<div class="inputs">
+							<div class="input-wrapper">
+								<input type="text" name="username" placeholder="手机或邮箱">
+								<label class="error is-visible" name="phonenumberoremailerror"/>
+							</div>
+							<div class="input-wrapper">
+								<input type="password" name="password" placeholder="密码" >
+								<label class="error is-visible" name="passworderror"/>
+							</div>			
+						</div>
+						<div class="button-wrapper">
+							<button class="login-button" name="loginbutton">登录</button>
+						</div>
+						<div class="checkbox-view">
+							<label class="remember-me">
+							<input type="checkbox" name="rememberme" checked="" value="true"> 记住我
+							</label>
+							&nbsp;
+							<a class="unable-login" href="#">无法登录?</a>
+						</div>
+						<div class="login-options">
+							<span class="sns-login">社交帐号登录</span>
+						</div>
+					</form>
+					<button class="download-button button-view">下载知乎App</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+		© 2016 知乎 · 知乎圆桌 · 发现 · 移动应用 · 使用机构帐号登录 · 联系我们· 刘看山 · 来知乎工作 · 京 ICP 备 13052560 号 · 京公网安备 11010802010035 号 · 北京智者天下科技有限公司
+		</div>
+		<script type="text/javascript" src="javascript/LoginRegisterPage.js">
+	</body>
+</html>
