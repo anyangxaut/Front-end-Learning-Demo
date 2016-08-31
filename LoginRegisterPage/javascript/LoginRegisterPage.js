@@ -1,90 +1,85 @@
-var divHeight=document.querySelector(".index-main-body").offsetHeight;
+ï»¿var divHeight=document.querySelector(".main-content").offsetHeight;
 var bodyHeight=document.documentElement.clientHeight;
-document.querySelector(".index-main-body").style.top=(bodyHeight-divHeight)/2+"px";
+document.querySelector(".main-content").style.top=(bodyHeight-divHeight)/2+"px";
 
-document.getElementsByName("sign-button")[0].onclick=function(){
-	var fullname=document.getElementsByName("fullname")[0].value;
-	var phone_num=document.getElementsByName("phone_num")[0].value;
+document.getElementsByName("registerbutton")[0].onclick=function(){
+	var username=document.getElementsByName("username")[0].value;
+	var phonenumber=document.getElementsByName("phonenumber")[0].value;
 	var password=document.getElementsByName("password")[0].value;
 	
 	var phone_re=/^1\d{10}$/;
-	if(fullname==""||phone_num==""||password==""||!phone_re.test(phone_num)||password.length<6||password.length>128){
-		if(fullname==""){
-		document.getElementsByName("nameerror")[0].innerHTML="ÇëÌîĞ´ĞÕÃû";
-		document.getElementsByName("nameerror")[0].style.opacity="1"
-		}else{document.getElementsByName("nameerror")[0].style.opacity="0";}
+	if(username==""||phonenumber==""||password==""||!phone_re.test(phonenumber)||password.length<6||password.length>128){
+		if(username==""){
+		document.getElementsByName("usernameerror")[0].innerHTML="è¯·å¡«å†™å§“å";
+		document.getElementsByName("usernameerror")[0].style.opacity="1"
+		}else{document.getElementsByName("usernameerror")[0].style.opacity="0";}
 		
-		if(phone_num==""){
-		document.getElementsByName("phoneerror")[0].innerHTML="ÇëÌîÊÖ»úºÅ";
-		document.getElementsByName("phoneerror")[0].style.opacity="1";
-		}else if(!phone_re.test(phone_num)){
-		document.getElementsByName("phoneerror")[0].innerHTML="ÇëÌîĞ´ÕıÈ·µÄÊÖ»úºÅ";
-		document.getElementsByName("phoneerror")[0].style.opacity="1";
-		}else{document.getElementsByName("phoneerror")[0].style.opacity="0";}
+		if(phonenumber==""){
+		document.getElementsByName("phonenumbererror")[0].innerHTML="è¯·å¡«æ‰‹æœºå·";
+		document.getElementsByName("phonenumbererror")[0].style.opacity="1";
+		}else if(!phone_re.test(phonenumber)){
+		document.getElementsByName("phonenumbererror")[0].innerHTML="è¯·å¡«å†™æ­£ç¡®çš„æ‰‹æœºå·";
+		document.getElementsByName("phonenumbererror")[0].style.opacity="1";
+		}else{document.getElementsByName("phonenumbererror")[0].style.opacity="0";}
 		
 		if(password==""){
-		document.getElementsByName("passworderror")[0].innerHTML="ÇëÌîĞ´ÃÜÂë";
+		document.getElementsByName("passworderror")[0].innerHTML="è¯·å¡«å†™å¯†ç ";
 		document.getElementsByName("passworderror")[0].style.opacity="1";
 		}else if(password.length<6||password.length>128){
-		document.getElementsByName("passworderror")[0].innerHTML="ÇëÌîĞ´6-128Î»µÄÃÜÂë";
+		document.getElementsByName("passworderror")[0].innerHTML="è¯·å¡«å†™6-128ä½çš„å¯†ç ";
 		document.getElementsByName("passworderror")[0].style.opacity="1";
 		}else{document.getElementsByName("passworderror")[0].style.opacity="0";}
 		
 		return;
 	}else{
-		document.getElementsByName("nameerror")[0].style.opacity="0";
-		document.getElementsByName("phoneerror")[0].style.opacity="0";
+		document.getElementsByName("usernameerror")[0].style.opacity="0";
+		document.getElementsByName("phonenumbererror")[0].style.opacity="0";
 		document.getElementsByName("passworderror")[0].style.opacity="0";
 		
 	}
 }
 
-
-document.getElementsByName("login-button")[0].onclick=function(){
-	var phone_num=document.getElementsByName("phone_num")[1].value;
+document.getElementsByName("loginbutton")[0].onclick=function(){
+	var username=document.getElementsByName("username")[1].value;
 	var password=document.getElementsByName("password")[1].value;
 	
 	var phone_re=/^1\d{10}$|^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
-	if(phone_num==""||password==""||!phone_re.test(phone_num)||password.length<6||password.length>128){
-		if(phone_num==""){
-		document.getElementsByName("phoneerror")[1].innerHTML="ÇëÌîÊÖ»úºÅ";
-		document.getElementsByName("phoneerror")[1].style.opacity="1";
-		}else if(!phone_re.test(phone_num)){
-		document.getElementsByName("phoneerror")[1].innerHTML="ÇëÌîĞ´ÕıÈ·µÄÊÖ»úºÅ";
-		document.getElementsByName("phoneerror")[1].style.opacity="1";
-		}else{document.getElementsByName("phoneerror")[1].style.opacity="0";}
+	if(username==""||password==""||!phone_re.test(username)||password.length<6||password.length>128){
+		if(username==""){
+		document.getElementsByName("phonenumberoremailerror")[0].innerHTML="è¯·å¡«æ‰‹æœºå·æˆ–é‚®ç®±";
+		document.getElementsByName("phonenumberoremailerror")[0].style.opacity="1";
+		}else if(!phone_re.test(username)){
+		document.getElementsByName("phonenumberoremailerror")[0].innerHTML="è¯·å¡«å†™æ­£ç¡®çš„æ‰‹æœºå·æˆ–é‚®ç®±";
+		document.getElementsByName("phonenumberoremailerror")[0].style.opacity="1";
+		}else{document.getElementsByName("phonenumberoremailerror")[0].style.opacity="0";}
 		
 		if(password==""){
-		document.getElementsByName("passworderror")[1].innerHTML="ÇëÌîĞ´ÃÜÂë";
+		document.getElementsByName("passworderror")[1].innerHTML="è¯·å¡«å†™å¯†ç ";
 		document.getElementsByName("passworderror")[1].style.opacity="1";
 		}else if(password.length<6||password.length>128){
-		document.getElementsByName("passworderror")[1].innerHTML="ÇëÌîĞ´6-128Î»µÄÃÜÂë";
+		document.getElementsByName("passworderror")[1].innerHTML="è¯·å¡«å†™6-128ä½çš„å¯†ç ";
 		document.getElementsByName("passworderror")[1].style.opacity="1";
 		}else{document.getElementsByName("passworderror")[1].style.opacity="0";}
 		
 		return;
 	}else{
-		document.getElementsByName("phoneerror")[1].style.opacity="0";
+		document.getElementsByName("phonenumberoremailerror")[0].style.opacity="0";
 		document.getElementsByName("passworderror")[1].style.opacity="0";
 	}
 }
 
-function changeActive(i){
-	switch(i){
-	case 1:
-		document.getElementById("signin").setAttribute("class", "");
-		document.getElementById("signup").setAttribute("class", "active");
-		document.querySelector(".navs-slider-bar").style.left="0em";
-		document.querySelector(".view-signin").style.display="none";
-		document.querySelector(".view-signup").style.display="block";
-		break;
-	case 2:
-		document.getElementById("signin").setAttribute("class", "active");
-		document.getElementById("signup").setAttribute("class", "");
-		document.querySelector(".navs-slider-bar").style.left="4em";
-		document.querySelector(".view-signin").style.display="block";
-		document.querySelector(".view-signup").style.display="none";
-		break;
-	}
-	
+function register(){
+		document.getElementById("login").setAttribute("class", "");
+		document.getElementById("register").setAttribute("class", "active");
+		document.querySelector(".slider-bar").style.left="0em";
+		document.querySelector(".view-login").style.display="none";
+		document.querySelector(".view-register").style.display="block";
+}
+
+function login(){
+		document.getElementById("login").setAttribute("class", "active");
+		document.getElementById("register").setAttribute("class", "");
+		document.querySelector(".slider-bar").style.left="4em";
+		document.querySelector(".view-login").style.display="block";
+		document.querySelector(".view-register").style.display="none";
 }
