@@ -1,5 +1,5 @@
 Front-end Learning Demo
 =========================================
 
-##前端小白成长记---从HTML+CSS+JavaScript到ReactJS+Redux
+前端小白成长记---从HTML+CSS+JavaScript到React+Redux
 =========================================
