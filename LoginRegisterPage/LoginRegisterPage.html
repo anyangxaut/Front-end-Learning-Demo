@@ -16,9 +16,9 @@
 			</div>
 			<div class="content sign-flow">
 				<div class="tab-navigation">
-					<a href="javascript:register()" class="active">注册</a>
-					<a href="javascript:login()">登录</a>
-					<span id="slider-bar"></span>
+					<a href="javascript:register()" id="register" class="active">注册</a>
+					<a href="javascript:login()" id="login">登录</a>
+					<span class="slider-bar"></span>
 				</div>
 				<!--注册-->				
 				<div class="view view-register">
@@ -38,7 +38,7 @@
 							</div>
 						</div>
 						<div class="button-wrapper">
-							<button class="register-button" name="registerbutton">注册知乎</button>
+							<input type="button" class="button" name="registerbutton" value="注册知乎"/>
 						</div>
 					</form>
 					<button class="download-button button-view">下载知乎App</button>
@@ -57,7 +57,7 @@
 							</div>			
 						</div>
 						<div class="button-wrapper">
-							<button class="login-button" name="loginbutton">登录</button>
+							<input type="button" class="button" name="loginbutton" value="登录"/>
 						</div>
 						<div class="checkbox-view">
 							<label class="remember-me">
