@@ -98,7 +98,7 @@ a {
 .sign-flow .view .input-wrapper+.input-wrapper {
 	border-top: 1px solid #e8e8e8;
 }	
-.sign-flow .register-button {
+.sign-flow .button {
 	background: #0f88eb;
 	box-shadow: none;
 	border: 0;
@@ -106,7 +106,7 @@ a {
 	line-height: 41px;
 	color: #fff;
 }
-.register-button {
+.button {
 	display: block;
 	padding: 0;
 	width: 100%;
