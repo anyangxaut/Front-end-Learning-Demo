@@ -36,21 +36,19 @@ body {
 	font-size: 18px;
 	line-height: 1;
 }
-.content {
+.tab-navigation {
 	margin-bottom: 10px;
 	font-size: 18px;
 	text-align: center;
-}
-.content .tab-navigation {
 	position: relative;
 	display: inline-block;
 }
-.content a.active {
+.tab-navigation a.active {
 	opacity: 1;
 	-ms-filter: "alpha(Opacity=100)";
 	color: #0f88eb;
 }
-.content a {
+.tab-navigation a {
 	float: left;
 	width: 4em;
 	line-height: 35px;
@@ -63,7 +61,7 @@ a {
 	text-decoration: none;
 	color:#555;
 }
-.content .tab-navigation .slider-bar {
+.tab-navigation .slider-bar {
 	position: absolute;
 	left: 0;
 	bottom: 0;
